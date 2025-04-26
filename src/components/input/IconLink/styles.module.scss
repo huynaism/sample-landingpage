@@ -1,0 +1,10 @@
+.btn {
+  display: block;
+  background-color: #6195ff;
+  padding: 10px;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.9;
+  }
+}

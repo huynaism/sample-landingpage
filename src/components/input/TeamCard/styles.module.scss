@@ -1,0 +1,90 @@
+.team-card {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+
+  h3 {
+    margin: 10px 0px;
+  }
+
+  span {
+    color: #868f9b;
+    font-size: 0.9rem;
+  }
+
+  img {
+    width: 100%;
+    height: 300px;
+    object-fit: fit-content;
+  }
+
+  .overlay {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 0px;
+    background-color: rgba(0, 0, 0, 0.85);
+    transition: 0.2s height;
+  }
+
+  .overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 40px;
+    right: 20px;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.2s opacity;
+
+    .social-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover {
+    &:after {
+      height: 100%;
+      transition: 0.2s height;
+    }
+
+    .overlay {
+      opacity: 1;
+      transition: 0.2s opacity;
+    }
+
+    span {
+      color: rgb(97, 149, 255);
+      transition: 0.2s color;
+      z-index: 1;
+    }
+
+    h3 {
+      transition: 0.2s color;
+      color: #fff;
+      z-index: 1;
+    }
+  }
+}

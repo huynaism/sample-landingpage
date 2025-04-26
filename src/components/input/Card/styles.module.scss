@@ -1,0 +1,44 @@
+.card {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 50px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    margin: 1em 0;
+  }
+
+  p {
+    margin: 0;
+    color: #636e72;
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  a {
+    color: rgb(97, 149, 255);
+    text-decoration: none;
+  }
+
+  &:after {
+    z-index: -1;
+    content: '';
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    position: absolute;
+    width: 0%;
+    background-color: #1e1c1c;
+    transition: 0.2s width;
+  }
+
+  &:hover {
+    color: #fff;
+
+    &:after {
+      width: 100%;
+    }
+  }
+}

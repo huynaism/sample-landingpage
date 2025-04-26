@@ -1,0 +1,80 @@
+$paging-height: 30px;
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .slide {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .overlay {
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: translateY(-$paging-height);
+    padding-left: 4px;
+    padding-right: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+
+    &:hover {
+      transition: 0.2s;
+      opacity: 1;
+    }
+
+    .btn {
+      padding: 15px;
+      background-color: #6195ff;
+      border-radius: 4px;
+
+      &:hover {
+        cursor: pointer;
+        opacity: 0.9;
+      }
+    }
+  }
+
+  .paging {
+    height: $paging-height;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .bullet {
+      background-color: #ececec;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      margin-right: 0.5rem;
+
+      &:hover {
+        cursor: pointer;
+        background-color: #6195ff;
+      }
+
+      &.active {
+        background-color: #6195ff;
+        width: 14px;
+        height: 14px;
+        border-radius: 7px;
+        transition: 0.3s;
+      }
+    }
+  }
+}
