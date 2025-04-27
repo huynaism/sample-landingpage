@@ -1,7 +1,27 @@
-# Landing Page
+# Simple ReactJS Website
 
-A Landing Page written in React with Typescript.
+A Simple Discord Bot Wesbite to Show Stats
 
-[Demo](http://hsk-kr.github.io/landing-page/)
-# sample-landingpage
-# sample-landingpage
+## Installation
+
+Setup this Project clone repo and open cmd in code directory
+then type
+
+```bash
+npm install
+```
+
+now type
+
+```bash
+npm run dev
+```
+
+to start Project
+
+## Developer
+
+This Website Coded By Tech Boy
+
+- [Discord](https://discord.gg/PcUVWApWN3)
+- [Youtube](https://youtube.com/techboy2)
